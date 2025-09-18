@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  background-color: #0F1419;
+  color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Amazon Prime-inspired scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0F1419;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00A8E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0088C7;
+}
+
+/* For video thumbnails and content cards */
+.content-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+/* Amazon Prime-inspired animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Custom padding for sections */
+.section-padding {
+  padding: 2rem 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .section-padding {
+    padding: 2.5rem 3rem;
+  }
+}
+
+/* Video grid layout */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Progress bar styling (for uploads) */
+.prime-progress {
+  height: 4px;
+  background-color: #535353;
+}
+
+.prime-progress .progress-bar {
+  background-color: #00A8E1;
+}
