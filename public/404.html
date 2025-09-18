@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | FlavorStream Studio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0F1419 0%, #1B2631 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 600px;
+            padding: 2rem;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: bold;
+            color: #00A8E1;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 20px rgba(0, 168, 225, 0.3);
+        }
+        
+        .error-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+        
+        .error-message {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #b3b3b3;
+            line-height: 1.6;
+        }
+        
+        .home-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #00A8E1, #0088C7);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 168, 225, 0.3);
+        }
+        
+        .home-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 168, 225, 0.4);
+        }
+        
+        .features {
+            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 168, 225, 0.2);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #00A8E1;
+        }
+        
+        .feature-desc {
+            font-size: 0.9rem;
+            color: #b3b3b3;
+        }
+        
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 6rem;
+            }
+            
+            .error-title {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Page Not Found</h1>
+        <p class="error-message">
+            Oops! The page you're looking for seems to have gone missing. 
+            But don't worry, FlavorStream Studio has plenty of delicious content to explore!
+        </p>
+        
+        <a href="/" class="home-button">🏠 Back to Home</a>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">📊</div>
+                <div class="feature-title">Analytics Dashboard</div>
+                <div class="feature-desc">Track your video performance</div>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">🎬</div>
+                <div class="feature-title">Video Upload</div>
+                <div class="feature-desc">AI-powered content analysis</div>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">📚</div>
+                <div class="feature-title">Video Library</div>
+                <div class="feature-desc">Manage your content</div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Redirect to home after 10 seconds if user doesn't interact
+        setTimeout(() => {
+            if (document.visibilityState === 'visible') {
+                window.location.href = '/';
+            }
+        }, 10000);
+    </script>
+</body>
+</html>
